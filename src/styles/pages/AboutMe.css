@@ -1,0 +1,18 @@
+.image-me{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.image-me img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 20rem;
+    height: 20rem;
+  }
+  .text-me{
+   text-align: center;
+  }
+  .text-me p{
+    font-size: 1.5rem;
+  }
