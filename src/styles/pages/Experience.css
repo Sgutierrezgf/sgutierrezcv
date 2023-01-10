@@ -1,3 +1,47 @@
-.Exp{
-    font-size: 1.1rem;
+.Exp {
+    padding: 2rem;
+    width: 65%;
+    display: flex;
+    margin: auto;
+}
+
+.WorkExp h1 {
+    font-size: 2rem;
+    display: flex;
+    padding-bottom: 2rem;
+}
+
+.TableExp-title {
+    color: var(--very-light-pink);
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.TableExp-title1,
+.TableExp-title2,
+.TableExp-title3,
+.TableExp-title4,
+.TableExp-title5 {
+    padding-bottom: 2rem;
+}
+
+.TableExp-description {
+    color: var(--black);
+    font-size: 1rem;
+}
+
+.TableExp-description1,
+.TableExp-description2,
+.TableExp-description3,
+.TableExp-description4,
+.TableExp-description5 {
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 1200px) {
+    .Exp {
+        padding: 2rem;
+        width: 75%;
+        display: flex;
+    }
 }

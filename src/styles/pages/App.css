@@ -10,6 +10,11 @@
 }
 
 body {
-    margin: 5px;
     font-family: "Quicksand", sans-serif;
+}
+
+@media screen and (max-width:1200px) {
+    :root {
+        display: grid;
+    }
 }
