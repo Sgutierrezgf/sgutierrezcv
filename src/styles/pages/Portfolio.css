@@ -16,11 +16,109 @@
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, 240px);
-    gap: 22px;
+    gap: 6rem;
     place-content: center;
 }
 
-.product-card {
+.card {
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.content {
+    text-align: center;
+    position: relative;
+    transition: all 2.25s;
+    background-color: rgb(127, 204, 240);
+    padding: 5em;
+    transform-style: preserve-3d;
+    height: 100%;
+}
+
+.card:hover .content {
+    transform: rotateY(0.5turn);
+}
+
+.ecommerce {
+    background-image: url('../img/Ecommerce.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.todo {
+    background-image: url('../img/To-do.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.JS {
+    background-image: url('../img/JS.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.game {
+    background-image: url('../img/game.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.api {
+    background-image: url('../img/api.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.front,
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 2em;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.title {
+    transform: translateZ(5rem);
+    font-size: 2rem;
+}
+
+.subtitle {
+    transform: translateZ(2rem);
+}
+
+.back {
+    transform: rotateY(0.5turn);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(149deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 35%, rgba(255, 255, 255, 1) 100%);
+}
+
+.back h3 {
+    color: white;
+}
+
+.back p {
+    color: white;
+}
+
+.description {
+    transform: translateZ(3rem);
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .icons a:hover {
+    background: black;
+} */
+
+/* .product-card {
     width: 240px;
 }
 
@@ -64,7 +162,7 @@
     margin-top: 0;
     margin-bottom: 0;
     color: var(--white);
-}
+} */
 
 @media (max-width: 640px) {
     .main-container {

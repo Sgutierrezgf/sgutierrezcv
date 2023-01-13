@@ -1,0 +1,150 @@
+.me {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(71, 67, 67, 1) 50%, rgba(255, 255, 255, 1) 100%);
+  margin: auto;
+  width: 75%;
+  display: flex;
+  border-radius: 0 0 50% 50%;
+}
+
+.image-me {
+  display: flex;
+  justify-content: normal;
+}
+
+.image-me img {
+  object-fit: cover;
+  width: 17rem;
+  height: 35rem;
+  margin: 1rem 0 0 1rem;
+}
+
+.text-me {
+  color: var(--white);
+}
+
+.text-me h1:nth-child(1) {
+  color: var(--white);
+  margin-left: 1rem;
+  font-size: 3.5rem;
+  line-height: 85px;
+  letter-spacing: -2.5px;
+}
+
+.text-me h1:nth-child(2) {
+  color: var(--white);
+  margin-left: 1rem;
+  font-size: 2.5rem;
+  line-height: 85px;
+  letter-spacing: -2.5px;
+}
+
+.text-me h2:nth-child(3) {
+  color: var(--white);
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  line-height: 85px;
+  letter-spacing: -2.5px;
+}
+
+
+.text-me p {
+  font-size: 1.5rem;
+}
+
+.aboutMe-CV {
+  text-align: center;
+}
+
+.Me-button {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  color: #18181a;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.Me-button span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.Me-button span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.Me-button:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.Me-button:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.Me-button:hover span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+
+
+@media (max-width: 1200px) {
+  .me {
+    background-color: black;
+    align-content: center;
+    display: grid;
+    width: 75%;
+    border-radius: 0;
+    height: 75%;
+  }
+
+  .image-me {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .image-me img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .text-me {
+    text-align: center;
+  }
+}

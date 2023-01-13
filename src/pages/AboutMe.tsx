@@ -1,31 +1,37 @@
-import port3 from '../styles/img/port3.jpeg'
+import React from 'react'
 import '../styles/pages/AboutMe.css'
+import me from '../styles/img/me.jpeg'
+import me2 from '../styles/img/me2.jpeg'
 
-
-
-const AboutMe = () => (
-    <section className='about-me'>
-        <div className='image-me'>
-            <img src={port3} alt="yo" />
-        </div>
-        <div className='text-me'>
-            <h1>Hello I`m Sebastian Gutierrez Guisao</h1>
-            <h1>Software developer frontend</h1>
-            <h2>Geek, Videogames</h2>
-            {/* <p>I'm a software developer, my forte is frontend development, in the last years I've
-                been preparing myself and continue learning new skills mostly with react and
-                javascript.
-                I try to keep a curious mentality of wanting to learn more every day, my goal is to
-                become a fullstack developer.</p> */}
-            <div className="elementor-element elementor-element-62c88949 elementor-widget elementor-widget-coco-button" data-id="62c88949" data-element_type="widget" data-widget_type="coco-button.default">
-                <div className="elementor-widget-container">
-                    <a className="coco-button slow-scroll" href="../styles/files/sebastiangutierrez-1.pdf" target="_blank" rel="nofollow">
-                        <span>DOWNLOAD CV</span>
-                    </a>
+const AboutMe = () => {
+    return (
+        <section className='about-me'>
+            <div className="container text-center">
+                <div className="row about-me-row">
+                    <div className="col-sm-6 aboutMe-text">
+                        <h1>About Me</h1>
+                        <p>I'm a software developer, my forte is frontend development, in the last years I've
+                            been preparing myself and continue learning new skills mostly with react and
+                            javascript.
+                            I try to keep a curious mentality of wanting to learn more every day, my goal is to
+                            become a fullstack developer.</p></div>
+                    <div className="col-sm-4 aboutMe-img"><img src={me} alt="me" /></div>
+                </div>
+                <div className="row about-me-row">
+                    <div className="col-sm-6 aboutMe-img"><img src={me2} alt="me2" /></div>
+                    <div className="col-sm-4 aboutMe-text">
+                        <h1>Activities & interests</h1>
+                        <p>Outside my work, I am a quiet
+                            person, I like to cook all kinds of
+                            food, I like to be at home reading
+                            or playing video games.
+                            I also like to exercise, I enjoy my
+                            pets and drinking coffee without
+                            sugar.</p></div>
                 </div>
             </div>
-        </div>
-    </section>
-)
+        </section>
+    )
+}
 
-export default AboutMe;
+export default AboutMe

@@ -91,17 +91,6 @@ const ContacMe = () => (
             </p>
             <p className="contact-Me-relative">
                 <br />
-                <span className="wpcf7-form-control-wrap" data-name="your-subject">
-                    <input size={40}
-                        className="contact-Me-subject"
-                        type="text"
-                        name="your-subject"
-                        placeholder="" />
-                </span>
-                <span className="input-default-text">Subject</span>
-            </p>
-            <p className="contact-Me-relative">
-                <br />
                 <span className="wpcf7-form-control-wrap" data-name="your-message">
                     <textarea cols={40} rows={10}
                         className="ContactMe-textArea"
@@ -115,11 +104,9 @@ const ContacMe = () => (
             <div>
             </div>
             <div>
-                <p className="contact-submit-holder">
-                    <input className="ContactMe-send"
-                        type="button" value="SEND MESSAGE" />
-                </p>
-                <div className="wpcf7-response-output" aria-hidden="true"></div>
+                <button className='contactMe-button'>
+                    <span>SEND MESSAGE</span>
+                </button>
             </div>
 
         </form>

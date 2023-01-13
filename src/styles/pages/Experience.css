@@ -1,7 +1,7 @@
 .Exp {
     padding: 2rem;
     width: 65%;
-    display: flex;
+    /* display: flex; */
     margin: auto;
 }
 
@@ -11,37 +11,22 @@
     padding-bottom: 2rem;
 }
 
-.TableExp-title {
-    color: var(--very-light-pink);
-    font-size: 1.5rem;
-    text-align: left;
-}
-
-.TableExp-title1,
-.TableExp-title2,
-.TableExp-title3,
-.TableExp-title4,
-.TableExp-title5 {
-    padding-bottom: 2rem;
-}
-
-.TableExp-description {
-    color: var(--black);
-    font-size: 1rem;
-}
-
-.TableExp-description1,
-.TableExp-description2,
-.TableExp-description3,
-.TableExp-description4,
-.TableExp-description5 {
-    padding-bottom: 2rem;
-}
-
 @media (max-width: 1200px) {
     .Exp {
         padding: 2rem;
-        width: 75%;
+        width: 100%;
         display: flex;
     }
+}
+
+.ant-table-thead th {
+    font-size: 2rem;
+}
+
+.ant-table-tbody td {
+    font-size: 1.2rem;
+}
+
+.ant-table-tbody td span {
+    font-size: 1.2rem;
 }

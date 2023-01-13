@@ -7,10 +7,13 @@
     --sm: 14px;
     --md: 16px;
     --lg: 18px;
+    --e-transform-transition-duration: .2s;
 }
 
 body {
     font-family: "Quicksand", sans-serif;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 69%, rgba(0, 0, 0, 1) 100%, rgba(13, 13, 13, 0) 100%, rgba(0, 0, 0, 1) 100%);
 }
 
 @media screen and (max-width:1200px) {
