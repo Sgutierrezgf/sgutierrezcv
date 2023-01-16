@@ -8,6 +8,7 @@ const ContacMe = () => (
             data-element_type="column"
             data-settings='{"background_background":"classic"}'
         >
+            <h1>Contact me</h1>
             <div className="ContactMe-message-info">
                 <div className="elementor-widget-wrap">
                     <div
@@ -45,10 +46,9 @@ const ContacMe = () => (
                         <div className="elementor-widget-container">
                             <div className="ContactMe-message-text">
                                 <p>
-                                    <strong>Name:</strong> Sebastian Gutierrez Guisao<br /><strong>Address:</strong>
-                                    Medellin, Colombia<br /><strong>Phone:</strong> +054 3012363606<br /><strong
-                                    >Hours:</strong
-                                    >
+                                    <strong>Name: </strong> Sebastian Gutierrez Guisao<br /><strong>Address: </strong>
+                                    Medellin, Colombia<br /><strong>Phone: </strong> +057 3012363606<br /><strong
+                                    >Hours: </strong>
                                     6:00 am – 16:00 pm
                                 </p>
                             </div>

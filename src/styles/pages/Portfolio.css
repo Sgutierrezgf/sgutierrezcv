@@ -2,15 +2,15 @@
     padding: 2rem;
     margin: auto;
     width: 75%;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(149deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 35%, rgba(255, 255, 255, 1) 100%);
+    background-color: rgb(0, 0, 0);
 }
 
 .main-container h1 {
     font-size: 2rem;
     display: flex;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     color: var(--white);
+    font-weight: bold;
 }
 
 .cards-container {
@@ -30,7 +30,6 @@
     text-align: center;
     position: relative;
     transition: all 2.25s;
-    background-color: rgb(127, 204, 240);
     padding: 5em;
     transform-style: preserve-3d;
     height: 100%;
@@ -93,16 +92,18 @@
 
 .back {
     transform: rotateY(0.5turn);
-    background: rgb(0, 0, 0);
-    background: linear-gradient(149deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 35%, rgba(255, 255, 255, 1) 100%);
+    background-color: rgb(0, 0, 0);
 }
 
 .back h3 {
     color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .back p {
     color: white;
+    font-size: 1rem;
 }
 
 .description {
@@ -114,55 +115,6 @@
     justify-content: space-around;
 }
 
-/* .icons a:hover {
-    background: black;
-} */
-
-/* .product-card {
-    width: 240px;
-}
-
-.product-card img {
-    width: 240px;
-    height: 240px;
-    border-radius: 20px;
-    object-fit: cover;
-}
-
-.product-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 12px;
-}
-
-.product-info figure {
-    margin: 0;
-}
-
-.product-info figure img {
-    width: 35px;
-    height: 35px;
-}
-
-.product-info div h1:nth-child(1) {
-    color: var(--white);
-}
-
-.product-info div p:nth-child(1) {
-    font-weight: bold;
-    font-size: var(--sm);
-    margin-top: 0;
-    margin-bottom: 4px;
-    color: var(--white);
-}
-
-.product-info div p:nth-child(2) {
-    font-size: var(--sm);
-    margin-top: 0;
-    margin-bottom: 0;
-    color: var(--white);
-} */
 
 @media (max-width: 640px) {
     .main-container {
@@ -173,16 +125,34 @@
 
     .cards-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, 140px);
+        grid-template-columns: 1fr;
         gap: 22px;
+        justify-items: center;
     }
 
     .product-card {
         width: 140px;
     }
 
+    .card {
+        width: 500px;
+        height: 500px;
+        cursor: pointer;
+    }
+
     .product-card img {
         width: 140px;
         height: 140px;
+    }
+
+    .back h3 {
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .back p {
+        color: white;
+        font-size: 1.5rem;
     }
 }

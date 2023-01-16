@@ -5,6 +5,7 @@
     max-width: 1200px;
     margin: auto;
     /* margin-top: 100px; */
+    background-color: rgb(0, 0, 0);
 }
 
 .box__footer {
@@ -13,10 +14,19 @@
     padding: 40px;
 }
 
+.box__footer h2 {
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
 .box__footer a {
     margin-top: 10px;
     color: #7a7a7a;
-    font-weight: 600;
+    font-size: 1rem;
+    list-style: none;
+    text-decoration: none;
 }
 
 .box__footer a:hover {
