@@ -1,13 +1,67 @@
-import React from 'react';
-import { useForm, ValidationError } from '@formspree/react';
+import React, { useState } from 'react';
+import axios from 'axios'
 import '../styles/pages/ContactMe.css'
 
 
 const ContacMe = () => {
 
-    const [state, sendEmail] = useForm("moqzvewr");
-    if (state.succeeded) {
-        return <p>Thanks for joining!</p>;
+    const [status, setStatus] = useState({
+        submitted: false,
+        submitting: false,
+        info: { error: false, msg: null }
+    })
+    const [inputs, setInputs] = useState({
+        name: '',
+        email: '',
+        message: ''
+    })
+    const handleServerResponse = (ok: boolean, msg: any) => {
+        if (ok) {
+            setStatus({
+                submitted: true,
+                submitting: false,
+                info: { error: false, msg: msg }
+            })
+            setInputs({
+                name: '',
+                email: '',
+                message: ''
+            })
+        } else {
+            // setStatus({
+            //     // info: { error: true, msg: msg }
+            // })
+        }
+    }
+    const handleOnChange = (e: { persist: () => void; target: { id: any; value: any; }; }) => {
+        e.persist()
+        setInputs(prev => ({
+            ...prev,
+            [e.target.id]: e.target.value
+        }))
+        setStatus({
+            submitted: false,
+            submitting: false,
+            info: { error: false, msg: null }
+        })
+    }
+    const sendEmail = (e: { preventDefault: () => void; }) => {
+        e.preventDefault()
+        setStatus(prevStatus => ({ ...prevStatus, submitting: true }))
+        axios({
+            method: 'POST',
+            url: 'https://formspree.io/moqzvewr',
+            data: inputs
+        })
+            .then((response: any) => {
+                handleServerResponse(
+                    true,
+                    'Thank you, your message has been submitted.'
+                )
+            })
+            .catch((error: { response: { data: { error: any; }; }; }) => {
+                handleServerResponse(false, error.response.data.error)
+            })
     }
 
     return (
@@ -87,13 +141,12 @@ const ContacMe = () => {
                     <span className="wpcf7-form-control-wrap" data-name="your-name">
                         <input size={40}
                             className="contact-Me-name"
+                            id="name"
                             type="text"
-                            name="user_name"
-                        />
-                        <ValidationError
-                            prefix="Name"
-                            field="email"
-                            errors={state.errors}
+                            name="_name"
+                            onChange={handleOnChange}
+                            required
+                            value={inputs.name}
                         />
                     </span>
                     <span className="input-default-text" >Name</span>
@@ -103,13 +156,12 @@ const ContacMe = () => {
                     <span className="wpcf7-form-control-wrap" data-name="your-email">
                         <input size={40}
                             className="contact-Me-email"
+                            id="email"
                             type="email"
-                            name="your-email" />
-                        <ValidationError
-                            prefix="Email"
-                            field="email"
-                            errors={state.errors}
-                        />
+                            name="_replyto"
+                            onChange={handleOnChange}
+                            required
+                            value={inputs.email} />
                     </span>
                     <span className="input-default-text">Email</span>
                 </p>
@@ -119,15 +171,15 @@ const ContacMe = () => {
                         <textarea cols={40} rows={10}
                             className="ContactMe-textArea"
                             aria-invalid="false"
-                            name="your-message"
+                            id="message"
+                            name="message"
                             placeholder=""
+                            onChange={handleOnChange}
+                            required
+                            value={inputs.message}
                         >
                         </textarea>
-                        <ValidationError
-                            prefix="Message"
-                            field="message"
-                            errors={state.errors}
-                        />
+
                     </span>
                     <span className="input-default-text">Message</span>
                 </p>
@@ -135,11 +187,19 @@ const ContacMe = () => {
                 </div>
                 <div>
                     <button className='contactMe-button' type='submit' value='Send'>
-                        <span>SEND MESSAGE</span>
+                        <span> {!status.submitting
+                            ? !status.submitted
+                                ? 'Submit'
+                                : 'Submitted'
+                            : 'Submitting...'}</span>
                     </button>
                 </div>
 
             </form>
+            {status.info.error && (
+                <div className="error">Error: {status.info.msg}</div>
+            )}
+            {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
         </section>
     )
 }
