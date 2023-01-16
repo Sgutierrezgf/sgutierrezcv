@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'
+import { LoadingOutlined } from '@ant-design/icons';
+import { Spin, Alert } from 'antd';
 import '../styles/pages/ContactMe.css'
 
 
@@ -63,6 +65,9 @@ const ContacMe = () => {
                 handleServerResponse(false, error.response.data.error)
             })
     }
+
+    const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
+
 
     return (
         <section className='ContactMe'>
@@ -191,15 +196,15 @@ const ContacMe = () => {
                             ? !status.submitted
                                 ? 'Submit'
                                 : 'Submitted'
-                            : 'Submitting...'}</span>
+                            : <Spin indicator={antIcon} />}</span>
                     </button>
                 </div>
-
+                {status.info.error && (
+                    <div className="error">Error: {status.info.msg}</div>
+                )}
+                {!status.info.error && status.info.msg && <Alert message={status.info.msg} type="success" />}
             </form>
-            {status.info.error && (
-                <div className="error">Error: {status.info.msg}</div>
-            )}
-            {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
+
         </section>
     )
 }
