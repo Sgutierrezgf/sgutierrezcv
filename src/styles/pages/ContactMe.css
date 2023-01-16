@@ -133,7 +133,7 @@
 }
 
 .contactMe-button {
-    background: #fff;
+    background: #000;
     border: none;
     padding: 10px 20px;
     display: inline-block;
@@ -157,14 +157,14 @@
     bottom: 0;
     right: 100%;
     left: 0;
-    background: rgb(20, 20, 20);
+    background: rgb(255, 254, 254);
     opacity: 0;
     z-index: -1;
     transition: all 0.5s;
 }
 
 .contactMe-button:hover {
-    color: #fff;
+    color: #000;
 }
 
 .contactMe-button:hover::before {

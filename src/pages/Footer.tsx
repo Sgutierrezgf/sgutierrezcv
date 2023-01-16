@@ -1,16 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import '../styles/pages/Footer.css'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const Footer = () => (
     <footer>
         <div className="container__footer">
             <div className="box__footer">
                 <h2>Informacion</h2>
-                <Link to="/about-me">About me</Link>
-                <Link to="/experience">Experience</Link>
-                <Link to="/portfolio">Portfolio</Link>
-                <Link to="/contact-me">Contact me</Link>
+                <a href="/about-me">About me</a>
+                <a href="/experience">Experience</a>
+                <a href="/portfolio">Portfolio</a>
+                <a href="/contact-me">Contact me</a>
             </div>
 
             <div className="box__footer">

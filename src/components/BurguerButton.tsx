@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from 'react';
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import '../styles/components/BurguerButton.css'
 
 const BurguerButton = () => {
@@ -21,10 +21,10 @@ const BurguerButton = () => {
 
       <nav className={`Cabecera-nav ${menu ? 'isActive' : ''}`}>
         <ul className="Cabecera-ul">
-          <li className="Cabecera-li"><Link to="/about-me" className="Cabecera-a">Acerca de mi</Link></li>
-          <li className="Cabecera-li"><Link to="/experience" className="Cabecera-a">Experiencia</Link></li>
-          <li className="Cabecera-li"><Link to="/portfolio" className="Cabecera-a">Portafolio</Link></li>
-          <li className="Cabecera-li"><Link to="/contact-me" className="Cabecera-a">Contacto</Link></li>
+          <li className="Cabecera-li"><a href="/about-me" className="Cabecera-a">Acerca de mi</a></li>
+          <li className="Cabecera-li"><a href="/experience" className="Cabecera-a">Experiencia</a></li>
+          <li className="Cabecera-li"><a href="/portfolio" className="Cabecera-a">Portafolio</a></li>
+          <li className="Cabecera-li"><a href="/contact-me" className="Cabecera-a">Contacto</a></li>
         </ul>
       </nav>
 
