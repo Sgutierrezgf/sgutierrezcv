@@ -1,8 +1,6 @@
 import port3 from '../styles/img/port3.jpeg'
 import '../styles/pages/Me.css'
 
-
-
 const Me = () => (
     <section className='me'>
         <div className='image-me'>
@@ -13,19 +11,22 @@ const Me = () => (
             <h1>Software developer frontend</h1>
             <h2>Geek, Videogames</h2>
             <div className="aboutMe-CV">
-                <button className='Me-button'>
-                    <span className="Me-button-text">
-                        DOWNLOAD MY CV
-                    </span>
-                    <span>
+                <div className="item button-parrot">
+                    <button className='buttonCV'>
                         <a href="https://github.com/Sgutierrezgf/sgutierrezcv/raw/main/src/styles/files/sebastiangutierrez-1.pdf">
-                            THANKS!
+                            DOWNLOAD MY CV
                         </a>
-                    </span>
-                </button>
+                        <div className="parrot"></div>
+                        <div className="parrot"></div>
+                        <div className="parrot"></div>
+                        <div className="parrot"></div>
+                        <div className="parrot"></div>
+                        <div className="parrot"></div>
+                    </button>
+                </div>
             </div>
         </div>
-    </section>
+    </section >
 )
 
 export default Me;
