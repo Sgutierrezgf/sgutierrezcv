@@ -38,7 +38,16 @@
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
+    cursor: pointer;
 }
+
+.Cabecera-li a:hover {
+    color: orange;
+    text-decoration: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 
 @media screen and (max-width:480px) {
 

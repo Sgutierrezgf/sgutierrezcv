@@ -5,7 +5,7 @@ import me2 from '../styles/img/me2.jpeg'
 
 const AboutMe = () => {
     return (
-        <section className='about-me'>
+        <section className='about-me' id='about-me'>
             <div className="container text-center">
                 <div className="row about-me-row">
                     <div className="col-sm-6 aboutMe-text">

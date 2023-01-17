@@ -16,21 +16,40 @@
 
 .box__footer h2 {
     margin-top: 10px;
-    color: #7a7a7a;
+    color: white;
     font-weight: bold;
     font-size: 2rem;
 }
 
 .box__footer a {
     margin-top: 10px;
-    color: #7a7a7a;
+    color: white;
     font-size: 1rem;
     list-style: none;
     text-decoration: none;
 }
 
+.Link {
+    margin-top: 10px;
+    color: white;
+    font-size: 1rem;
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Link:hover {
+    margin-top: 10px;
+    color: orange;
+    font-size: 1rem;
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .box__footer a:hover {
     opacity: 0.8;
+    color: orange;
 }
 
 .box__footer a .fab {

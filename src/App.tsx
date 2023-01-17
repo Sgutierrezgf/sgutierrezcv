@@ -6,16 +6,16 @@ import Experience from './pages/Experience';
 import Portfolio from './pages/Portfolio';
 import ContactMe from './pages/ContactMe';
 import './styles/pages/App.css'
-// import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Element } from 'react-scroll'
 
 function App() {
   return (
     <Layout className='App'>
-      <Me />
-      <AboutMe />
-      <Experience />
-      <Portfolio />
-      <ContactMe />
+      <Element name=""><Me /></Element>
+      <Element name="about-me"><AboutMe /></Element>
+      <Element name="experience"><Experience /></Element>
+      <Element name="portfolio"><Portfolio /></Element>
+      <Element name="contact-me"><ContactMe /></Element>
     </Layout>
 
   );

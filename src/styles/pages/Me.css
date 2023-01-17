@@ -56,6 +56,10 @@
   margin: 60px;
 }
 
+.buttonCV a:hover {
+  color: orange;
+}
+
 
 @media (max-width: 1200px) {
   .me {
@@ -102,6 +106,10 @@ button {
   position: relative;
   transition: 0.2s ease-in-out;
   letter-spacing: 2px;
+}
+
+button:hover {
+  border: 3px solid orange;
 }
 
 .name {

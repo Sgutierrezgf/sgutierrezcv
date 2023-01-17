@@ -69,7 +69,7 @@ const data: DataType[] = [
 ];
 
 const Experience = () => (
-    <section className="Exp">
+    <section className="Exp" id='experience'>
         <div className="WorkExp">
             <h1>Experience</h1>
 

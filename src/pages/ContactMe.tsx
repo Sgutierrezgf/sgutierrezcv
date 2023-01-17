@@ -70,7 +70,7 @@ const ContacMe = () => {
 
 
     return (
-        <section className='ContactMe'>
+        <section className='ContactMe' id='contact-me'>
             <div
                 className="ContactMe-message"
                 data-id="2a167c9b"
@@ -202,7 +202,7 @@ const ContacMe = () => {
                 {status.info.error && (
                     <div className="error">Error: {status.info.msg}</div>
                 )}
-                {!status.info.error && status.info.msg && <Alert message={status.info.msg} type="success" />}
+                {!status.info.error && status.info.msg && <Alert message={status.info.msg} type="success" style={{ marginTop: '10px' }} />}
             </form>
 
         </section>
